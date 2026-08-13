@@ -1,294 +1,833 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Graciella Favoreto</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0a0a0b;--surface:#111113;--border:#1f1f23;--border2:#2a2a30;
-  --text:#f0eff0;--muted:#6b6b75;--sub:#3a3a42;
-  --accent:#5b8def;--accent2:#3fcf8e;--warn:#f5a623;
-}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.6}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:820px;margin:0 auto;padding:64px 24px 96px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Graciella Favoreto — PhD researcher in Artificial Intelligence, Medical Imaging and Deep Learning at ICMC-USP.">
+  <meta name="theme-color" content="#0b0d12">
+  <title>Graciella Favoreto · AI & Medical Imaging</title>
 
-/* NAV */
-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:80px}
-.nav-id{font-family:'Syne',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--muted)}
-.nav-links{display:flex;gap:24px}
-.nav-links a{font-size:12px;color:var(--muted);letter-spacing:.05em;transition:color .2s}
-.nav-links a:hover{color:var(--text)}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-/* HERO */
-.hero{margin-bottom:72px}
-.hero-tag{font-size:11px;font-family:'Syne',sans-serif;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:16px}
-h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.05;letter-spacing:-.03em;margin-bottom:20px}
-.hero-bio{font-size:14px;color:var(--muted);max-width:480px;line-height:1.75;margin-bottom:28px}
-.hero-links{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-family:'Syne',sans-serif;font-weight:600;letter-spacing:.04em;padding:8px 16px;border-radius:6px;border:1px solid var(--border2);color:var(--muted);transition:all .2s}
-.btn:hover{border-color:var(--accent);color:var(--accent)}
-.btn i{font-size:11px}
+  <style>
+    :root {
+      --bg: #090b10;
+      --surface: #10131a;
+      --surface-2: #141821;
+      --border: #232936;
+      --text: #f3f5f8;
+      --muted: #a4adbd;
+      --dim: #687386;
+      --blue: #78a9ff;
+      --cyan: #6de0d0;
+      --purple: #b79cff;
+      --max: 1040px;
+    }
 
-/* SECTION */
-.sec{margin-bottom:60px}
-.sec-label{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sub);margin-bottom:24px;display:flex;align-items:center;gap:12px}
-.sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
-/* TAGS */
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{font-size:11px;padding:4px 10px;border-radius:4px;border:1px solid var(--border2);color:var(--muted)}
-.tag.a{border-color:#1e3a6e;color:#5b8def;background:#0d1f3c}
-.tag.g{border-color:#0f3a25;color:#3fcf8e;background:#051a10}
+    html {
+      scroll-behavior: smooth
+    }
 
-/* TIMELINE */
-.tl{display:flex;flex-direction:column}
-.tl-row{display:grid;grid-template-columns:88px 1fr;gap:0 20px;padding:18px 0;border-bottom:1px solid var(--border)}
-.tl-row:last-child{border-bottom:none}
-.yr{font-family:'Syne',sans-serif;font-size:11px;color:var(--muted);padding-top:3px;line-height:1.3}
-.ti{font-size:13px;font-weight:500;margin-bottom:2px;line-height:1.4}
-.ts{font-size:12px;color:var(--muted);margin-bottom:3px}
-.td{font-size:11.5px;color:var(--sub);line-height:1.55}
-.badge{display:inline-block;font-size:10px;font-family:'Syne',sans-serif;font-weight:700;padding:1px 7px;border-radius:3px;margin-left:6px;vertical-align:middle}
-.b-blue{background:#0d1f3c;color:#5b8def}
-.b-green{background:#051a10;color:#3fcf8e}
-.b-orange{background:#2a1800;color:#f5a623}
+    body {
+      font-family: "DM Sans", sans-serif;
+      background:
+        radial-gradient(circle at 80% 0%, rgba(120, 169, 255, .09), transparent 30rem),
+        radial-gradient(circle at 5% 35%, rgba(109, 224, 208, .05), transparent 24rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+    }
 
-/* PUBS */
-.pub{padding:14px 0;border-bottom:1px solid var(--border);font-size:12.5px;line-height:1.65}
-.pub:last-child{border-bottom:none}
-.pub-yr{font-size:10px;font-family:'Syne',sans-serif;letter-spacing:.06em;color:var(--sub);margin-bottom:3px}
-.pub-title{font-weight:500;margin-bottom:2px;color:var(--text)}
-.pub-venue{color:var(--muted);font-size:11.5px}
+    a {
+      color: inherit;
+      text-decoration: none
+    }
 
-/* SKILLS */
-.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
-.sk-group-title{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-.sk-item{font-size:12px;color:var(--muted);padding:3px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px}
-.sk-item::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--border2);flex-shrink:0}
+    .wrap {
+      max-width: var(--max);
+      margin: auto;
+      padding: 30px 28px 90px
+    }
 
-/* SERVICE */
-.sv{display:grid;grid-template-columns:88px 1fr;gap:0 20px;padding:10px 0;border-bottom:1px solid var(--border);font-size:12px}
-.sv:last-child{border-bottom:none}
-.sv-yr{font-family:'Syne',sans-serif;font-size:10.5px;color:var(--muted);padding-top:2px}
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 14px;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 16px;
+      margin-bottom: 92px;
+      background: rgba(9, 11, 16, .78);
+      border: 1px solid rgba(255, 255, 255, .07);
+      border-radius: 14px;
+      backdrop-filter: blur(14px);
+    }
 
-/* FOOTER */
-footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.ft{font-size:11px;font-family:'Syne',sans-serif;color:var(--sub);letter-spacing:.04em}
+    .brand {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      letter-spacing: .04em;
+      font-size: 14px;
+    }
 
-@media(max-width:560px){
-  h1{font-size:2rem}
-  .tl-row,.sv{grid-template-columns:1fr;gap:2px}
-  .sk-grid{grid-template-columns:1fr 1fr}
-}
-</style>
+    .brand span {
+      color: var(--blue)
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      transition: .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text)
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 105px;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(3rem, 8vw, 5.8rem);
+      line-height: .94;
+      letter-spacing: -.065em;
+      margin-bottom: 26px;
+    }
+
+    h1 .soft {
+      color: var(--blue)
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 680px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .hero-card {
+      border: 1px solid var(--border);
+      background: linear-gradient(145deg, rgba(120, 169, 255, .08), rgba(255, 255, 255, .015));
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .hero-card .mini {
+      color: var(--dim);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .hero-card strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .hero-card p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 28px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 9px 13px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      background: rgba(255, 255, 255, .015);
+      transition: .2s;
+    }
+
+    .btn:hover {
+      border-color: var(--blue);
+      color: var(--text);
+      transform: translateY(-1px)
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 94px;
+      scroll-margin-top: 90px
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .section-head .num {
+      color: var(--blue);
+      font: 600 11px "Space Grotesk", sans-serif;
+    }
+
+    .section-head h2 {
+      font: 600 19px "Space Grotesk", sans-serif;
+      letter-spacing: -.02em;
+    }
+
+    .section-head::after {
+      content: "";
+      height: 1px;
+      background: var(--border);
+      flex: 1
+    }
+
+    /* RESEARCH */
+    .research-grid {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 28px;
+    }
+
+    .research-copy {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-content: start
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 11px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, .015);
+    }
+
+    .tag.primary {
+      color: var(--blue);
+      border-color: rgba(120, 169, 255, .25)
+    }
+
+    .tag.green {
+      color: var(--cyan);
+      border-color: rgba(109, 224, 208, .22)
+    }
+
+    /* TIMELINE */
+    .timeline {
+      border-left: 1px solid var(--border);
+      margin-left: 7px
+    }
+
+    .item {
+      position: relative;
+      padding: 0 0 34px 30px;
+    }
+
+    .item:last-child {
+      padding-bottom: 0
+    }
+
+    .item::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 6px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--blue);
+    }
+
+    .date {
+      font: 600 10px "Space Grotesk", sans-serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 7px;
+    }
+
+    .item h3 {
+      font: 600 15px "Space Grotesk", sans-serif;
+      margin-bottom: 4px
+    }
+
+    .where {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 7px
+    }
+
+    .desc {
+      color: var(--dim);
+      font-size: 12px;
+      line-height: 1.7
+    }
+
+    .badge {
+      display: inline-block;
+      margin-left: 7px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(109, 224, 208, .09);
+      color: var(--cyan);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+
+    /* PUBLICATIONS */
+    .pubs {
+      display: grid;
+      gap: 1px
+    }
+
+    .pub {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 22px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub:last-child {
+      border-bottom: 0
+    }
+
+    .pub-year {
+      color: var(--dim);
+      font: 600 10px "Space Grotesk", sans-serif;
+      letter-spacing: .08em;
+    }
+
+    .pub h3 {
+      font: 500 14px/1.55 "Space Grotesk", sans-serif;
+      margin-bottom: 5px;
+    }
+
+    .pub p {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.6
+    }
+
+    .pub.featured h3 {
+      color: var(--text)
+    }
+
+    .pub.featured .pub-year {
+      color: var(--blue)
+    }
+
+    /* TWO COLUMNS */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px
+    }
+
+    .subsection h3 {
+      font: 600 11px "Space Grotesk", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--blue);
+      margin-bottom: 14px;
+    }
+
+    .list {
+      list-style: none
+    }
+
+    .list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .list li:last-child {
+      border-bottom: 0
+    }
+
+    .list strong {
+      display: block;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 2px
+    }
+
+    .list small {
+      color: var(--dim);
+      font-size: 10.5px
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-box {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      background: rgba(255, 255, 255, .012);
+    }
+
+    .skill-box h3 {
+      font: 600 11px "Space Grotesk", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .skill-box p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.9
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--dim);
+      font-size: 10.5px;
+    }
+
+    @media(max-width:800px) {
+      .hero {
+        grid-template-columns: 1fr
+      }
+
+      .hero-card {
+        max-width: 420px
+      }
+
+      .research-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 35px
+      }
+
+      .skills {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:560px) {
+      .wrap {
+        padding: 20px 18px 60px
+      }
+
+      nav {
+        margin-bottom: 65px
+      }
+
+      .nav-links a:nth-child(-n+2) {
+        display: none
+      }
+
+      h1 {
+        font-size: 3.3rem
+      }
+
+      .hero {
+        margin-bottom: 75px
+      }
+
+      section {
+        margin-bottom: 70px
+      }
+
+      .pub {
+        grid-template-columns: 1fr;
+        gap: 5px
+      }
+
+      .pub-year {
+        margin-bottom: 2px
+      }
+
+      footer {
+        flex-direction: column
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="wrap">
+  <div class="wrap">
 
-<nav>
-  <span class="nav-id">GSF</span>
-  <div class="nav-links">
-    <a href="mailto:graciellafavoreto@usp.br">email</a>
-    <a href="https://github.com/Graciella-Favoreto">github</a>
-    <a href="https://br.linkedin.com/in/graciella-dos-santos-favoreto">linkedin</a>
-    <a href="http://lattes.cnpq.br/7015367458649160">lattes</a>
-  </div>
-</nav>
-
-<div class="hero">
-  <div class="hero-tag">PhD Researcher · ICMC-USP</div>
-  <h1>Graciella<br>S. Favoreto</h1>
-  <p class="hero-bio">
-    PhD student in Computer Science (ICMC-USP), FAPESP fellow. BSc in Biomedical Informatics (FMRP-USP).
-    I develop deep learning methods for diagnosis support in chest X-rays and Computed Tomography — focusing on segmentation,
-    classification, multimodality, and explainability. Member of GBDI and MAInLab.
-  </p>
-  <div class="hero-links">
-    <a href="mailto:graciellafavoreto@usp.br" class="btn"><i class="fas fa-envelope"></i> graciellafavoreto@usp.br</a>
-    <a href="https://github.com/Graciella-Favoreto" class="btn"><i class="fab fa-github"></i> GitHub</a>
-    <a href="https://br.linkedin.com/in/graciella-dos-santos-favoreto" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="http://lattes.cnpq.br/7015367458649160" class="btn"><i class="fas fa-graduation-cap"></i> Lattes CV</a>
-  </div>
-</div>
-
-<!-- Research -->
-<div class="sec">
-  <div class="sec-label">Research interests</div>
-  <div class="tags">
-    <span class="tag a">Deep Learning</span>
-    <span class="tag a">Computer Vision</span>
-    <span class="tag a">Explainable AI</span>
-    <span class="tag a">Knowledge Distillation</span>
-    <span class="tag a">Medical Imaging</span>
-    <span class="tag a">Multimodality</span>
-    <span class="tag g">Segmentation</span>
-    <span class="tag g">Classification</span>
-    <span class="tag g">X-ray</span>
-    <span class="tag g">Computed Tomography</span>
-    <span class="tag g">Computer-Aided Diagnosis</span>
-  </div>
-</div>
-
-<!-- Education -->
-<div class="sec">
-  <div class="sec-label">Education</div>
-  <div class="tl">
-    <div class="tl-row">
-      <div class="yr">2024 —<br>present</div>
-      <div>
-        <div class="ti">PhD in Computer Science and Computational Mathematics <span class="badge b-blue">FAPESP</span></div>
-        <div class="ts">ICMC · University of São Paulo</div>
-        <div class="td">Integration of deep learning tools for diagnostic support in clinical chest X-rays<br>
-        Advisor: Prof. Agma Juci Machado Traina · Co-advisor: Dr. Marcel Koenigkam Santos</div>
+    <nav>
+      <a class="brand" href="#">GS<span>F</span></a>
+      <div class="nav-links">
+        <a href="#research">research</a>
+        <a href="#education">education</a>
+        <a href="#publications">publications</a>
+        <a href="#service">service</a>
+        <a href="#contact">contact</a>
       </div>
-    </div>
-    <div class="tl-row">
-      <div class="yr">2020 —<br>2024</div>
+    </nav>
+
+
+    <header class="hero">
       <div>
-        <div class="ti">BSc in Biomedical Informatics</div>
-        <div class="ts">FMRP · University of São Paulo</div>
-        <div class="td">Thesis: Automated segmentation of lumbar vertebral bodies using Mask R-CNN<br>
-        Advisor: Prof. Paulo Mazzoncini de Azevedo Marques</div>
+        <div class="eyebrow">PhD Researcher · ICMC-USP · FAPESP</div>
+        <h1>Graciella<br><span class="soft">Favoreto.</span></h1>
+        <p class="lead">
+          PhD researcher in Computer Science and Computational Mathematics at ICMC-USP,
+          with a background in Biomedical Informatics. I develop deep learning methods
+          for computer-aided diagnosis in medical imaging, with emphasis on segmentation,
+          classification, multimodality and explainability.
+        </p>
+
+        <div class="links" id="contact">
+          <a class="btn" href="mailto:graciellafavoreto@usp.br"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a class="btn" href="https://github.com/Graciella-Favoreto" target="_blank"><i
+              class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn" href="https://br.linkedin.com/in/graciella-dos-santos-favoreto" target="_blank"><i
+              class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a class="btn" href="http://lattes.cnpq.br/7015367458649160" target="_blank"><i
+              class="fa-solid fa-graduation-cap"></i> Lattes</a>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- Publications -->
-<div class="sec">
-  <div class="sec-label">Publications</div>
-  <div class="pub">
-    <div class="pub-yr">2026 · Conference proceedings</div>
-    <div class="pub-title">CoSegXAI: A Pipeline for Context vs. Segmented ROI Images in Lung Disease Classification through Saliency Map Insights</div>
-    <div class="pub-venue">FAVORETO, G. S. et al. — XX Workshop de Visão Computacional (WVC), v. 33, p. 73–80.</div>
-  </div>
-  <div class="pub">
-    <div class="pub-yr">2025 · Conference proceedings</div>
-    <div class="pub-title">Machine Learning for Automated Classification of Vertebral Bodies with a Propensity to Fragility Fracture</div>
-    <div class="pub-venue">ZANI, V. H.; ROZETTE, J. P. T.; FAVORETO, G. S. et al. — SABI 2025, v. 136, p. 1362–1368.</div>
-  </div>
-  <div class="pub">
-    <div class="pub-yr">2025 · Conference proceedings</div>
-    <div class="pub-title">Machine Learning for Automated Segmentation of Vertebral Bodies in Magnetic Resonance Imaging</div>
-    <div class="pub-venue">ROZETTE, J. P. T.; FAVORETO, G. S. et al. — SABI 2025, v. 136, p. 1283–1291.</div>
-  </div>
-  <div class="pub">
-    <div class="pub-yr">2023 · Extended abstract</div>
-    <div class="pub-title">Automated segmentation of lumbar vertebral bodies in MRI using Mask R-CNN</div>
-    <div class="pub-venue">FAVORETO, G. S. et al. — XI Simpósio de Instrumentação e Imagens Médicas, p. 39–40.</div>
-  </div>
-  <div class="pub">
-    <div class="pub-yr">2017 · Abstract <span class="badge b-orange">Honorable Mention</span></div>
-    <div class="pub-title">Effect of cigarette use during pregnancy on neonatal head circumference: a cohort study</div>
-    <div class="pub-venue">FAVORETO, G. S. et al. — VIII Encontro de Biologia Comparada, v. VIII, p. 27.</div>
-  </div>
-</div>
+      <aside class="hero-card">
+        <div class="mini">Current focus</div>
+        <strong>AI for Medical Imaging</strong>
+        <p>
+          Chest X-rays · Computed Tomography · Deep Learning ·
+          Multimodal Health Data · Explainable AI · Fine-grained Classification · Segmentation · Saliency Maps
+        </p>
+      </aside>
+    </header>
 
-<!-- Projects -->
-<div class="sec">
-  <div class="sec-label">Research projects</div>
-  <div class="tl">
-    <div class="tl-row">
-      <div class="yr">2025 —<br>present</div>
-      <div>
-        <div class="ti">IHealth-MD — Intelligent Management of Multimodal Health Data <span class="badge b-blue">FAPESP Thematic</span></div>
-        <div class="td">Big Data + AI on electronic health records, focusing on pulmonary and cardiovascular diseases.<br>PI: Prof. Agma Juci Machado Traina.</div>
+    <section id="research">
+      <div class="section-head"><span class="num">01</span>
+        <h2>Research</h2>
       </div>
-    </div>
-    <div class="tl-row">
-      <div class="yr">2025 —<br>present</div>
-      <div>
-        <div class="ti">Interpretability & Explainability in Medical Decision Support Systems</div>
-        <div class="td">Complex content-based data retrieval in Big Data for diagnostic AI. PI: Prof. Agma Juci Machado Traina.</div>
+      <div class="research-grid">
+        <p class="research-copy">
+          My research lies at the intersection of artificial intelligence, computer vision
+          and medical imaging. My current work investigates deep learning approaches for
+          diagnostic support, including segmentation and classification of pulmonary
+          conditions, multimodal analysis involving X-ray and CT, and methods for making
+          model behavior more interpretable and explainable.
+        </p>
+        <div class="tags">
+          <span class="tag primary">Deep Learning</span>
+          <span class="tag primary">Computer Vision</span>
+          <span class="tag primary">Medical Imaging</span>
+          <span class="tag primary">Explainable AI</span>
+          <span class="tag primary">Knowledge Distillation</span>
+          <span class="tag primary">Multimodality</span>
+          <span class="tag green">Segmentation</span>
+          <span class="tag green">Classification</span>
+          <span class="tag green">Chest X-ray</span>
+          <span class="tag green">Computed Tomography</span>
+          <span class="tag green">Computer-Aided Diagnosis</span>
+        </div>
       </div>
-    </div>
-    <div class="tl-row">
-      <div class="yr">2022 —<br>2023</div>
-      <div>
-        <div class="ti">Automated Segmentation of Lumbar Vertebral Bodies using Mask R-CNN <span class="badge b-green">Completed</span></div>
-        <div class="td">Segmentation of L1–L5 in MRI of 63 post-menopausal patients (HCFMRP-USP). Best mAP: 0.92 (test) · 0.98 (validation).</div>
+    </section>
+
+    <section id="education">
+      <div class="section-head"><span class="num">02</span>
+        <h2>Education</h2>
       </div>
-    </div>
-  </div>
-</div>
+      <div class="timeline">
 
-<!-- Skills -->
-<div class="sec">
-  <div class="sec-label">Technical skills</div>
-  <div class="sk-grid">
-    <div>
-      <div class="sk-group-title">AI & Vision</div>
-      <div class="sk-item">Deep Learning (CNN, Mask R-CNN)</div>
-      <div class="sk-item">Explainable AI · Saliency Maps</div>
-      <div class="sk-item">Computer Vision · OpenCV</div>
-      <div class="sk-item">Machine Learning</div>
-    </div>
-    <div>
-      <div class="sk-group-title">Frameworks</div>
-      <div class="sk-item">Python · PyTorch · TensorFlow</div>
-      <div class="sk-item">Scikit-learn · FastAPI</div>
-      <div class="sk-item">Docker · PostgreSQL</div>
-      <div class="sk-item">Git</div>
-    </div>
-    <div>
-      <div class="sk-group-title">Development</div>
-      <div class="sk-item">Flutter · Java (Android)</div>
-      <div class="sk-item">Node.js · TypeScript</div>
-      <div class="sk-item">PHP · HTML · CSS</div>
-      <div class="sk-item">WordPress · Yii2</div>
-    </div>
-  </div>
-</div>
+        <article class="item">
+          <div class="date">2024 — present</div>
+          <h3>PhD in Computer Science and Computational Mathematics <span class="badge">FAPESP</span></h3>
+          <div class="where">Institute of Mathematics and Computer Sciences (ICMC) · University of São Paulo</div>
+          <p class="desc">
+            Thesis: Integration of deep learning tools for diagnostic support in clinical chest X-rays.
+            Advisor: Prof. Agma Juci Machado Traina · Co-advisor: Dr. Marcel Koenigkam Santos.
+          </p>
+        </article>
 
-<!-- Academic Service -->
-<div class="sec">
-  <div class="sec-label">Academic service</div>
-  <div class="sv">
-    <div class="sv-yr">2026</div>
-    <div class="sv-body">
-      <div class="sv-role">Peer Reviewer</div>
-      <div class="sv-where">39th IEEE International Symposium on Computer-Based Medical Systems (CBMS)</div>
-      <div class="sv-where">28th International Conference on Pattern Recognition (ICPR)</div>
-      <div class="sv-where">IEEE Open Journal of the Computer Society (OJCS)</div>
-    </div>
-  </div>
-  <div class="sv">
-    <div class="sv-yr">2025</div>
-    <div class="sv-body">
-      <div class="sv-role">Teaching Internship — SCC0650 Computer Graphics</div>
-      <div class="sv-where">ICMC · University of São Paulo</div>
-    </div>
-  </div>
-  <div class="sv">
-    <div class="sv-yr">2025</div>
-    <div class="sv-body">
-      <div class="sv-role">BSc Thesis Committee Member <span style="color:var(--sub)">· 2 defenses</span></div>
-      <div class="sv-where">University of São Paulo</div>
-      <div class="sv-role" style="margin-top:10px">Evaluator — 33rd SIICUSP</div>
-      <div class="sv-where">International Symposium on Scientific and Technological Initiation, USP</div>
-      <div class="sv-role" style="margin-top:10px">Evaluator — Hackathon Semcomp</div>
-      <div class="sv-where">University of São Paulo</div>
-    </div>
-  </div>
-  <div class="sv">
-    <div class="sv-yr">2023–24</div>
-    <div class="sv-body">
-      <div class="sv-role">President, Academic League of Medical Imaging and Computer Vision (LAIMCV)</div>
-      <div class="sv-where">FMRP · University of São Paulo</div>
-    </div>
-  </div>
-</div>
+        <article class="item">
+          <div class="date">2020 — 2024</div>
+          <h3>BSc in Biomedical Informatics</h3>
+          <div class="where">Ribeirão Preto Medical School (FMRP) · University of São Paulo</div>
+          <p class="desc">
+            Thesis: Automated segmentation of lumbar vertebral bodies using Mask R-CNN.
+            Advisor: Prof. Paulo Mazzoncini de Azevedo Marques.
+          </p>
+        </article>
 
-<footer>
-  <span class="ft">ICMC/USP · São Carlos, SP — Brazil</span>
-  <span class="ft">Updated May 2026</span>
-</footer>
+      </div>
+    </section>
 
-</div>
+    <section id="publications">
+      <div class="section-head"><span class="num">03</span>
+        <h2>Selected publications</h2>
+      </div>
+
+      <div class="pubs">
+
+        <article class="pub featured">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>Knowledge Distillation with Hybrid Soft-Label Losses for Imbalanced Lung Nodule Classification</h3>
+            <p>Favoreto, G. S.; Aguiar, E. J.; Campos, L. O.; Cazzolato, M. T.; Santos, M. K.; Traina, A. J. M. · IEEE
+              39th International Symposium on Computer-Based Medical Systems (CBMS), 2026.</p>
+          </div>
+        </article>
+
+        <article class="pub featured">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>Incomplete information retrieval without imputation: exploiting the correlation among deep features</h3>
+            <p>Campos, L. O.; Favoreto, G. S.; Traina Jr, C.; Traina, A. J. M.; Cazzolato, M. T. · IEEE 39th
+              International Symposium on Computer-Based Medical Systems (CBMS), 2026.</p>
+          </div>
+        </article>
+
+        <article class="pub featured">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>CoSegXAI: A Pipeline for Context vs. Segmented ROI Images in Lung Disease Classification through
+              Saliency Map Insights</h3>
+            <p>Favoreto, G. S.; Uchida, M. A. S.; Luiz, P. A.; Aguiar, E. J.; Santos, M. K.; Traina, A. J. M. · XX
+              Workshop de Visão Computacional (WVC), 2026, v. 33, p. 73–80.</p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <div class="pub-year">2025</div>
+          <div>
+            <h3>Machine Learning for Automated Classification of Vertebral Bodies with a Propensity to Fragility
+              Fracture</h3>
+            <p>Zani, V. H.; Rozette, J. P. T.; Luciano, G.; Favoreto, G. S.; Nogueira-Barbosa, M. H.; Azevedo-Marques,
+              P. M. · XXV Argentinian Congress of Bioengineering (SABI 2025), v. 136, p. 1362–1368.</p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <div class="pub-year">2025</div>
+          <div>
+            <h3>Machine Learning for Automated Segmentation of Vertebral Bodies in Magnetic Resonance Imaging</h3>
+            <p>Rozette, J. P. T.; Zani, V. H.; Luciano, G.; Ricoboni, L. T.; Favoreto, G. S.; Nogueira-Barbosa, M. H.;
+              Azevedo-Marques, P. M. · XXV Argentinian Congress of Bioengineering (SABI 2025), v. 136, p. 1283–1291.</p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <div class="pub-year">2023</div>
+          <div>
+            <h3>Automated segmentation of lumbar vertebral bodies in MRI using Mask R-CNN</h3>
+            <p>Favoreto, G. S.; Cordeiro, S. S.; Nogueira-Barbosa, M. H.; Azevedo-Marques, P. M. · XI Simpósio de
+              Instrumentação e Imagens Médicas, 2023, p. 39–40.</p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <div class="pub-year">2017</div>
+          <div>
+            <h3>The effect of cigarette use during pregnancy on neonatal head circumference: a cohort study</h3>
+            <p>Favoreto, G. S.; Rocha, P. R. H.; Barbieri, M. A.; Bettiol, H. · VIII Encontro de Biologia Comparada,
+              2017, v. VIII, p. 27.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><span class="num">04</span>
+        <h2>Research projects</h2>
+      </div>
+      <div class="timeline">
+
+        <article class="item">
+          <div class="date">2025 — present</div>
+          <h3>Intelligent Management of Multimodal Health Data — IHealth-MD <span class="badge">FAPESP Thematic</span>
+          </h3>
+          <p class="desc">
+            Research project focused on managing and integrating multimodal health data using
+            Big Data and Artificial Intelligence, with an initial focus on pulmonary and
+            cardiovascular diseases. Coordinator: Prof. Agma Juci Machado Traina.
+          </p>
+        </article>
+
+        <article class="item">
+          <div class="date">2025 — present</div>
+          <h3>Interpretability and Explainability in Medical Decision Support Systems</h3>
+          <p class="desc">
+            Research on interpretability and explainability in medical decision-support systems
+            using complex content-based data retrieval in Big Data. Coordinator: Prof. Agma Juci Machado Traina.
+          </p>
+        </article>
+
+        <article class="item">
+          <div class="date">2022 — 2023</div>
+          <h3>Automated Segmentation of Lumbar Vertebral Bodies using Mask R-CNN <span class="badge">Completed</span>
+          </h3>
+          <p class="desc">
+            Investigation of Mask R-CNN for segmentation of L1–L5 vertebral bodies in MRI
+            examinations from 63 post-menopausal patients. Best mAP: 0.92 on test and 0.98 on validation.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><span class="num">05</span>
+        <h2>Technical skills</h2>
+      </div>
+      <div class="skills">
+        <div class="skill-box">
+          <h3>AI & Vision</h3>
+          <p>Deep Learning · Computer Vision · Machine Learning · Mask R-CNN · Explainable AI · Saliency Maps · Medical
+            Imaging</p>
+        </div>
+        <div class="skill-box">
+          <h3>Python & Data</h3>
+          <p>Python · PyTorch · TensorFlow · Scikit-learn · OpenCV · FastAPI · PostgreSQL · Docker · Git</p>
+        </div>
+        <div class="skill-box">
+          <h3>Software Development</h3>
+          <p>Flutter · Java / Android · Node.js · TypeScript · PHP · HTML · CSS · JavaScript · WordPress · Yii2</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="service">
+      <div class="section-head"><span class="num">06</span>
+        <h2>Academic service & outreach</h2>
+      </div>
+
+      <div class="two-col">
+        <div class="subsection">
+          <h3>Academic service</h3>
+          <ul class="list">
+            <li>
+              <strong>Peer Reviewer</strong>
+              <small>IEEE 39th International Symposium on Computer-Based Medical Systems (CBMS), 2026</small>
+            </li>
+            <li>
+              <strong>Peer Reviewer</strong>
+              <small>28th International Conference on Pattern Recognition (ICPR), 2026</small>
+            </li>
+            <li>
+              <strong>Peer Reviewer</strong>
+              <small>IEEE Open Journal of the Computer Society, 2026</small>
+            </li>
+            <li>
+              <strong>BSc Thesis Committee Member</strong>
+              <small>University of São Paulo · 2025–2026</small>
+            </li>
+            <li>
+              <strong>Evaluator · 33rd SIICUSP</strong>
+              <small>University of São Paulo · 2025</small>
+            </li>
+            <li>
+              <strong>Evaluator · Hackathon Semcomp</strong>
+              <small>University of São Paulo · 2025</small>
+            </li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>Teaching & outreach</h3>
+          <ul class="list">
+            <li>
+              <strong>Teaching Internship · Computer Graphics</strong>
+              <small>SCC0650 · ICMC-USP · 2025</small>
+            </li>
+            <li>
+              <strong>President · LAIMCV</strong>
+              <small>Academic League of Medical Imaging and Computer Vision · FMRP-USP · 2023–2024</small>
+            </li>
+            <li>
+              <strong>Invited talk · AI applied to healthcare</strong>
+              <small>XXIII Semana Brasileira de Informática Biomédica · 2025</small>
+            </li>
+            <li>
+              <strong>Invited talk · Deep learning in medical imaging</strong>
+              <small>Semana da Computação UFTPR-CP · 2025</small>
+            </li>
+            <li>
+              <strong>Invited talk · AI and opportunities</strong>
+              <small>E.E. Coronel Arthur Pires · 2025</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>ICMC · University of São Paulo · São Carlos, Brazil</span>
+      <span>Curriculum updated · August 2026</span>
+    </footer>
+
+  </div>
 </body>
+
 </html>
